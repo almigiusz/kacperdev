@@ -1,0 +1,142 @@
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #151515;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1400px;
+  width: 100%;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.nav__brand {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 2em;
+}
+
+.nav__title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #acff91;
+}
+
+.nav__title--special {
+  color: #fff;
+  font-weight: 100;
+}
+
+.nav__items {
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.5s;
+  transition: max-height 0.5s;
+}
+
+.nav__mobile--active {
+  max-height: 100vh;
+}
+
+.nav__item {
+  list-style: none;
+  font-size: 1.6rem;
+  margin: 2em 0em;
+  text-align: center;
+}
+
+.nav__link {
+  padding: 1em 2em;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.nav__link:hover {
+  color: #acff91;
+}
+
+.nav__link--contact {
+  border: 2px solid #acff91;
+  border-radius: 30px;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+
+.nav__link--contact:hover {
+  color: #141414;
+  background-color: #acff91;
+}
+
+@media (min-width: 768px) {
+  .nav {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .nav__brand {
+    display: block;
+  }
+  .nav__brand h2 {
+    font-size: 3rem;
+  }
+  .nav__brand .hamburger {
+    display: none;
+  }
+  .nav__items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    max-height: 100vh;
+  }
+  .nav__item {
+    padding: 1em;
+    font-size: 1.4rem;
+    display: inline-block;
+  }
+}
+/*# sourceMappingURL=style.css.map */
