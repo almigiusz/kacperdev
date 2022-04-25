@@ -36,6 +36,7 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding: 0 1em;
 }
 
 .nav__brand {
@@ -82,8 +83,8 @@ a {
 
 .nav__link {
   padding: 1em 2em;
-  -webkit-transition: color 0.3s;
-  transition: color 0.3s;
+  -webkit-transition: color 0.5s;
+  transition: color 0.5s;
 }
 
 .nav__link:hover {
@@ -93,8 +94,8 @@ a {
 .nav__link--contact {
   border: 2px solid #acff91;
   border-radius: 30px;
-  -webkit-transition: background-color 0.3s;
-  transition: background-color 0.3s;
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
 }
 
 .nav__link--contact:hover {
@@ -118,9 +119,6 @@ a {
   .nav__brand {
     display: block;
   }
-  .nav__brand h2 {
-    font-size: 3rem;
-  }
   .nav__brand .hamburger {
     display: none;
   }
@@ -132,11 +130,24 @@ a {
         -ms-flex-pack: justify;
             justify-content: space-between;
     max-height: 100vh;
+    margin: 2em;
   }
   .nav__item {
-    padding: 1em;
-    font-size: 1.4rem;
+    padding: 1em 0em;
+    font-size: 1.5rem;
     display: inline-block;
+  }
+  .nav__title {
+    font-size: 4rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .nav__item {
+    font-size: 1.6rem;
+  }
+  .nav__title {
+    font-size: 4rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
