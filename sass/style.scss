@@ -14,17 +14,38 @@ html {
 body {
 	font-family: 'Roboto', sans-serif;
 	background-color: #151515;
+	color: #fff;
 }
 
 .wrapper {
 	margin: 0 auto;
 	max-width: 1400px;
 	width: 100%;
+	padding: 0 3em;
 }
 
 a {
 	color: #fff;
 	text-decoration: none;
+}
+
+h2 {
+	display: flex;
+	position: relative;
+	align-items: center;
+	font-weight: 700;
+	color: #acff91;
+	font-size: 4rem;
+}
+
+h2::after {
+	content: '';
+	display: block;
+	position: relative;
+	width: 300px;
+	height: 1px;
+	margin-left: 40px;
+	background-color: #fff;
 }
 
 .nav {
@@ -35,7 +56,7 @@ a {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		margin: 2em;
+		margin: 2em 0;
 	}
 
 	&__title {
@@ -67,23 +88,88 @@ a {
 	}
 
 	&__link {
-		padding: 1em 2em;
-		transition: color 0.3s;
+		padding: 0.6em 1.5em;
+		font-size: 2rem;
+		transition: color 0.5s;
 
 		&:hover {
 			color: #acff91;
 		}
+	}
+}
+
+.header {
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+	padding: 15rem 0;
+	min-height: 50vh;
+
+	&__text {
+		font-size: 2.5rem;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 2rem;
+	}
+
+	&__heading {
+		&--highlighted {
+			color: #acff91;
+		}
+	}
+
+	&__subheading {
+		color: #b7b6b2;
+		line-height: 160%;
+		font-weight: 100;
+	}
+
+	&__image {
+		display: flex;
+		justify-content: center;
+		border-radius: 100%;
+		margin-bottom: 50px;
+	}
+
+	&__photo {
+		border-radius: 50%;
+		border: 6px solid #acff91;
+		height: 280px;
+		width: 280px;
+	}
+
+	&__link {
+		padding: 0.6em 1.5em;
+		font-size: 2.4rem;
+		transition: color 0.5s;
+		background-color: #acff91;
+		color: #141414;
+		transform: translateY(10px);
 
 		&--contact {
-			border: 2px solid #acff91;
 			border-radius: 30px;
-			transition: background-color 0.3s;
+			transition: background-color 0.5s, color 0.5s, border 0.3s;
 
 			&:hover {
-				color: #141414;
-				background-color: #acff91;
+				border: 2px solid #acff91;
+				color: #fff;
+				background-color: #141414;
 			}
 		}
+	}
+}
+
+.about {
+	&__container {
+		max-width: 620px;
+	}
+
+	&__text {
+		font-size: 2rem;
+		font-weight: 400;
+		line-height: 150%;
+		margin: 2em 0;
 	}
 }
 
@@ -95,10 +181,7 @@ a {
 
 		&__brand {
 			display: block;
-
-			h2 {
-				font-size: 3rem;
-			}
+			margin: 0;
 
 			.hamburger {
 				display: none;
@@ -112,9 +195,59 @@ a {
 		}
 
 		&__item {
-			padding: 1em;
-			font-size: 1.4rem;
+			padding: 1em 0em;
+			font-size: 1.5rem;
 			display: inline-block;
+		}
+
+		&__title {
+			font-size: 4rem;
+		}
+	}
+
+	.header {
+		&__text {
+			max-width: 624px;
+		}
+
+		&__heading {
+			font-size: 4rem;
+			font-weight: 700;
+		}
+
+		&__subheading {
+			font-size: 2.4rem;
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.nav {
+		&__item {
+			font-size: 1.6rem;
+		}
+
+		&__title {
+			font-size: 4rem;
+		}
+	}
+
+	.header {
+		.container {
+			display: flex;
+			justify-content: space-between;
+			width: 100%;
+		}
+		&__image {
+			display: flex;
+			justify-content: flex-end;
+			order: 1;
+			padding: 0 3em;
+		}
+
+		&__photo {
+			width: 400px;
+			height: 400px;
 		}
 	}
 }
